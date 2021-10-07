@@ -112,7 +112,7 @@ export default function Navbar(props: any) {
         <Header>
             <LogoImage src={Logo} alt="App logo" />
             <NavMenu open={open}>
-                {navOptions.map((item, index) => <NavHashLink key={index} to={`/portfolio#${item.link}`}>{item.name}</NavHashLink>)}
+                {navOptions.map((item, index) => <NavHashLink key={index} to={`/portfolio#${item.link}`} onClick={handleClick}>{item.name}</NavHashLink>)}
             </NavMenu>
             <MenuButton open={open} handleClick={handleClick} />
         </Header>
