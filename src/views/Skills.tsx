@@ -13,6 +13,7 @@ const stack = [FaHtml5, FaCss3, IoLogoJavascript, FaAngular, FaReact, FaGit];
 
 const SkillsSection = styled(Section)`
     background-color: #f4f4f4;
+    height: 30vh;
 `;
 
 const Title = styled.h2`
@@ -42,7 +43,7 @@ const Tools = styled.div`
 
 export default function Skills() {
     return (
-        <div id={Routes.HOME}>
+        <div id={Routes.SKILLS}>
             <IntersectionObserver id={Routes.SKILLS} hash={Routes.SKILLS}>
                 <SkillsSection>
                     <Wrapper>

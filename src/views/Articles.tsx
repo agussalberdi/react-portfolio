@@ -1,13 +1,16 @@
 import React from 'react'
 import styled from 'styled-components';
+import IntersectionObserver from '../components/IntersectionObserver';
 import { Section } from '../components/Section';
 import Wrapper from '../components/Wrapper';
 import { Article } from '../models/article';
+import { Routes } from '../models/routes';
 import article from '../assets/images/article1.png';
 import article2 from '../assets/images/article2.png';
 
 const ArticlesSection = styled(Section)`
     background-color: #ffffff;
+    height: 30vh;
 `;
 
 const Container = styled.div`
@@ -43,13 +46,17 @@ export default function Articles() {
     ];
 
     return (
-        <ArticlesSection>
-            <Wrapper>
-                <Title>Featured</Title>
-                <Container>
-                    {articles.map((article: Article) => <ArticleTag href={article.url} target="_blank"><img src={article.image} /></ArticleTag>)}
-                </Container>
-            </Wrapper>
-        </ArticlesSection>
+        <div id={Routes.ARTICLES}>
+            <IntersectionObserver id={Routes.ARTICLES} hash={Routes.ARTICLES}>
+                <ArticlesSection>
+                    <Wrapper>
+                        <Title>Featured</Title>
+                        <Container>
+                            {articles.map((article: Article) => <ArticleTag href={article.url} target="_blank"><img src={article.image} /></ArticleTag>)}
+                        </Container>
+                    </Wrapper>
+                </ArticlesSection>
+            </IntersectionObserver>
+        </div>
     )
 }

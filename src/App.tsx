@@ -7,7 +7,7 @@ import {
 import { lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 
-const Start = lazy(() => import('./components/Start'));
+const Start = lazy(() => import('./views/Start'));
 const Home = lazy(() => import('./views/Home'));
 const About = lazy(() => import('./views/About'));
 const Skills = lazy(() => import('./views/Skills'));

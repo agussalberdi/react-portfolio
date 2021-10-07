@@ -1,48 +1,59 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { NavHashLink } from 'react-router-hash-link';
 import Logo from '../assets/images/logo.png';
+import MenuButton from './MenuButton';
 import { NavigationOption } from '../models/navigation-option';
 import { device } from '../utilities/device';
-import { Routes } from '../models/routes';
 
 const Header = styled.header`
-    display: block;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 10vh;
-    z-index: 2;
+    z-index: 999;
     background-color: #171718;
     transition: all .5s;
-`;
-
-const Container = styled.div`
-    position: relative;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
     padding: 15px;
+    box-sizing: border-box;
+
+    @media screen and ${device.mobileL} {
+        align-items: flex-start;
+    }
 `;
 
 const LogoImage = styled.img`
-    display: block;
     width: 50px;
     height: auto;
-
-    @media screen and ${device.mobileL} {
-        display: none;
-    }
 `;
+
+interface Props {
+    open: boolean;
+}
 
 const NavMenu = styled.nav`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
     width: 80%;
+
+    @media screen and ${device.mobileL} {
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding-top: 100px;
+        opacity: ${(props: Props) => (props.open ? "1" : "0")};
+        pointer-events: ${(props: Props) => (props.open ? "auto" : "none")};
+        transform: scale(${(props: Props) => (props.open ? "1" : "1.5")});
+        background-color: #171718;
+    }
 
     a {
         text-decoration: none;
@@ -75,10 +86,20 @@ const NavMenu = styled.nav`
             transition: width 350ms ease-in-out;
             width: 100%;
         }
+
+        @media screen and ${device.mobileL} {
+            font-size: 25px;
+        }
     }
 `;
 
 export default function Navbar(props: any) {
+    const [open, setOpen] = useState(false);
+
+    const handleClick = () => {
+        setOpen(!open);
+    }
+
     const navOptions: NavigationOption[] = [
         { name: 'Home', link: 'home'},
         { name: 'About', link: 'about'},
@@ -89,12 +110,11 @@ export default function Navbar(props: any) {
 
     return (
         <Header>
-            <Container>
-                <LogoImage src={Logo} alt="App logo" />
-                <NavMenu>
-                    {navOptions.map((item, index) => <NavHashLink key={index} to={`/portfolio#${item.link}`}>{item.name}</NavHashLink>)}
-                </NavMenu>
-            </Container>
+            <LogoImage src={Logo} alt="App logo" />
+            <NavMenu open={open}>
+                {navOptions.map((item, index) => <NavHashLink key={index} to={`/portfolio#${item.link}`}>{item.name}</NavHashLink>)}
+            </NavMenu>
+            <MenuButton open={open} handleClick={handleClick} />
         </Header>
     )
 }
