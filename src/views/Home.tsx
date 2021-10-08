@@ -7,6 +7,7 @@ import IntersectionObserver from '../components/IntersectionObserver';
 import { Section } from '../components/Section';
 import { Routes } from '../models/routes';
 import bg from '../assets/images/bg.jpg';
+import Slider from '../components/Slider';
 
 const HomeSection = styled(Section)`
     background: linear-gradient(rgba(0, 0, 0, 0.92), rgba(14, 121, 121, 0.66)), url(${bg});
@@ -30,12 +31,13 @@ const SocialContainer = styled.div`
     a {
         color: #d6d6d6;
         font-size: 2rem;
-        margin: 5px;
+        margin-right: 5px;
     }
 `;
 
 const Title = styled.h2`
-    margin: 5px;
+    margin: 0;
+    margin-top: 20px;
     font-family: 'Italianno', cursive;
     font-weight: 300;
     letter-spacing: .15em;
@@ -64,7 +66,7 @@ export default function Home() {
                                 </a>
                             </SocialContainer>
                             <Title>I'm Agustin Alberdi</Title>
-                            <p>Front End Engineer</p>
+                            <Slider auto={true} arrows={false}></Slider>
                         </MainContainer>
                     </Wrapper>
                 </HomeSection>

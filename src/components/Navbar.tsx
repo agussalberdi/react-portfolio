@@ -39,6 +39,7 @@ const NavMenu = styled.nav`
     justify-content: space-around;
     align-items: center;
     width: 80%;
+    transition: all .5s;
 
     @media screen and ${device.mobileL} {
         width: 100%;
