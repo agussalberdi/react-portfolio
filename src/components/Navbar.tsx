@@ -5,6 +5,7 @@ import Logo from '../assets/images/logo.png';
 import MenuButton from './MenuButton';
 import { NavigationOption } from '../models/navigation-option';
 import { device } from '../utilities/device';
+import { Animations } from '../utilities/Animations';
 
 const Header = styled.header`
     position: fixed;
@@ -19,6 +20,7 @@ const Header = styled.header`
     align-items: center;
     padding: 15px;
     box-sizing: border-box;
+    animation: 2s ${Animations.FadeInDown};
 
     @media screen and ${device.mobileL} {
         align-items: flex-start;

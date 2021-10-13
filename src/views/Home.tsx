@@ -8,6 +8,7 @@ import { Section } from '../components/Section';
 import { Routes } from '../models/routes';
 import bg from '../assets/images/bg.jpg';
 import Slider from '../components/Slider';
+import { Animations } from '../utilities/Animations';
 
 const HomeSection = styled(Section)`
     background: linear-gradient(rgba(0, 0, 0, 0.92), rgba(14, 121, 121, 0.66)), url(${bg});
@@ -27,6 +28,7 @@ const MainContainer = styled.div`
 const SocialContainer = styled.div`
     display: flex;
     justify-content: flex-start;
+    animation: 2s ${Animations.FadeInUp};
 
     a {
         color: #d6d6d6;
@@ -42,6 +44,7 @@ const Title = styled.h2`
     font-weight: 300;
     letter-spacing: .15em;
     color: #d6d6d6;
+    animation: 2s ${Animations.FadeInUp};
 `;
 
 export default function Home() {

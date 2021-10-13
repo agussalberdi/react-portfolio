@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { Animations } from '../utilities/Animations';
 
 const SliderWrapper = styled.div`
     display: flex;
@@ -8,6 +9,7 @@ const SliderWrapper = styled.div`
     width: 230px;
     margin-top: 20px;
     transition: 1s;
+    animation: 2s ${Animations.FadeInUp};
 `;
 
 const Slide = styled.div`

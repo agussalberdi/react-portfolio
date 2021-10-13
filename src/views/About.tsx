@@ -10,15 +10,10 @@ import { device } from '../utilities/device';
 const AboutSection = styled(Section)`
     background: #1B1B1B;
     text-align: left;
-    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     color: white;
-
-    @media screen and ${device.mobileL} {
-        height: auto;
-    }
 `;
 
 const Title = styled.h1`
@@ -42,9 +37,10 @@ const TextWrapper = styled.div`
     flex-wrap: wrap;
 
     div.text {
-        width: 45%;
+        width: 48%;
+        letter-spacing: 1.5px;
 
-        @media screen and ${device.mobileL} {
+        @media screen and ${device.tablet} {
             width: 100%;
         }
     }
@@ -78,6 +74,8 @@ const Bullet = styled.div`
 
     p {
         color: white;
+        letter-spacing: 1.5px;
+        font-size: 14px;
     }
 
     @media screen and ${device.laptop} {

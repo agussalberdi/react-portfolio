@@ -1,7 +1,8 @@
 import React from 'react'
+import styled from 'styled-components';
 import { FaAngular, FaReact, FaGit, FaHtml5, FaCss3 } from "react-icons/fa";
 import { IoLogoJavascript } from 'react-icons/io';
-import styled from 'styled-components';
+import { SiTypescript } from 'react-icons/si';
 
 import IntersectionObserver from '../components/IntersectionObserver';
 import { Section } from '../components/Section';
@@ -9,7 +10,7 @@ import Wrapper from '../components/Wrapper';
 import { Routes } from '../models/routes';
 import { device } from '../utilities/device';
 
-const stack = [FaHtml5, FaCss3, IoLogoJavascript, FaAngular, FaReact, FaGit];
+const stack = [FaHtml5, FaCss3, IoLogoJavascript, SiTypescript, FaAngular, FaReact, FaGit];
 
 const SkillsSection = styled(Section)`
     background-color: #f4f4f4;
@@ -39,13 +40,17 @@ const Tools = styled.div`
             display: block;
         }
 
-        @media screen and ${device.mobileL} {
-            width: calc(100% / 3);
+        @media screen and ${device.tablet} {
+            width: 25%;
             margin-top: 20px;
         }
 
+        @media screen and ${device.mobileL} {
+            width: 33%;
+        }
+
         @media screen and ${device.mobileM} {
-            width: calc(100% / 2);
+            width: 50%;
         }
     }
 `;
@@ -67,8 +72,12 @@ export default function Skills() {
                                 <span>CSS3</span>
                             </div>
                             <div>
-                                <IoLogoJavascript color="e8d44d" />
+                                <IoLogoJavascript color="#e8d44d" />
                                 <span>JavaScript</span>
+                            </div>
+                            <div>
+                                <SiTypescript color="#2f73bf" />
+                                <span>TypeScript</span>
                             </div>
                             <div>
                                 <FaAngular color="#d1382b" />
