@@ -1,14 +1,12 @@
 import styled, { keyframes } from 'styled-components';
-import { fadeInUp, fadeInDown, fadeInLeft, fadeInRight } from 'react-animations';
+import { fadeInUp, fadeInDown, zoomIn } from 'react-animations';
 
 const FadeInUp = keyframes`${fadeInUp}`;
 const FadeInDown = keyframes`${fadeInDown}`;
-const FadeInLeft = keyframes`${fadeInLeft}`;
-const FadeInRight = keyframes`${fadeInRight}`;
+const ZoomIn = keyframes`${zoomIn}`;
 
 export const Animations = {
     FadeInUp,
     FadeInDown,
-    FadeInLeft,
-    FadeInRight
+    ZoomIn
 };
