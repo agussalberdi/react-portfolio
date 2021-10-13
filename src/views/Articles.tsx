@@ -11,7 +11,6 @@ import article2 from '../assets/images/article2.png';
 
 const ArticlesSection = styled(Section)`
     background-color: #ffffff;
-    height: 30vh;
 `;
 
 const Container = styled.div`

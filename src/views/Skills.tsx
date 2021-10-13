@@ -13,11 +13,10 @@ const stack = [FaHtml5, FaCss3, IoLogoJavascript, FaAngular, FaReact, FaGit];
 
 const SkillsSection = styled(Section)`
     background-color: #f4f4f4;
-    height: 30vh;
 `;
 
 const Title = styled.h2`
-    margin: 0 0 15px 0;
+    margin: 0 0 25px 0;
 
     @media screen and ${device.mobileM} {
         font-size: 18px;
