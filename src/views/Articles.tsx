@@ -5,6 +5,7 @@ import { Section } from '../components/Section';
 import Wrapper from '../components/Wrapper';
 import { Article } from '../models/article';
 import { Routes } from '../models/routes';
+import { device } from '../utilities/device';
 import article from '../assets/images/article1.png';
 import article2 from '../assets/images/article2.png';
 
@@ -26,11 +27,17 @@ const ArticleTag = styled.a`
     img {
         width: 100%;
     }
+
+    @media screen and ${device.mobileL} {
+        width: 100%;
+        margin-top: 20px;
+    }
 `;
 
 const Title = styled.h2`
     text-align: left;
     color: #191919;
+    margin: 0 0 15px 0;
 `;
 
 export default function Articles() {

@@ -7,6 +7,7 @@ const SliderWrapper = styled.div`
     align-items: center;
     width: 230px;
     margin-top: 20px;
+    transition: 1s;
 `;
 
 const Slide = styled.div`
@@ -16,7 +17,7 @@ const Slide = styled.div`
     padding: 5px;
     color: #ffffff;
     font-weight: 700;
-    transition: all .6s;
+    transition: 1s;
 `;
 
 const Arrow = styled.div`

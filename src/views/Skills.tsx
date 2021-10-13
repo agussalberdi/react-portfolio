@@ -17,6 +17,11 @@ const SkillsSection = styled(Section)`
 `;
 
 const Title = styled.h2`
+    margin: 0 0 15px 0;
+
+    @media screen and ${device.mobileM} {
+        font-size: 18px;
+    }
 `;
 
 const Tools = styled.div`
@@ -35,8 +40,13 @@ const Tools = styled.div`
             display: block;
         }
 
-        @media scren and ${device.mobileL} {
-            width: calc(100% / ${stack.length * 0.5});
+        @media screen and ${device.mobileL} {
+            width: calc(100% / 3);
+            margin-top: 20px;
+        }
+
+        @media screen and ${device.mobileM} {
+            width: calc(100% / 2);
         }
     }
 `;
