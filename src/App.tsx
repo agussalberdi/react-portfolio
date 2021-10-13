@@ -6,6 +6,7 @@ import {
   } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const Start = lazy(() => import('./views/Start'));
 const Home = lazy(() => import('./views/Home'));
@@ -28,6 +29,7 @@ function App() {
                                     <Skills />
                                     <Articles />
                                 </div>
+                                <Footer></Footer>
                             </Route>
                         </Switch>
                 </div>
