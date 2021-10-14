@@ -3,12 +3,13 @@ import styled from 'styled-components';
 
 interface Props {
     alignment: string;
+    overflow: string;
 }
   
 const WrapperElement = styled.div`
     position: relative;
     display: block;
-    overflow: hidden;
+    overflow: ${(props: Props) => props.overflow || 'hidden'};
     margin: 0 auto;
     max-width: 1230px;
     width: 90%;
@@ -17,7 +18,7 @@ const WrapperElement = styled.div`
 
 export default function Wrapper(props: any) {
     return (
-        <WrapperElement alignment={props.alignment}>
+        <WrapperElement alignment={props.alignment} overflow={props.overflow}>
             {props.children}
         </WrapperElement>
     )

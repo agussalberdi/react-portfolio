@@ -12,6 +12,7 @@ const Start = lazy(() => import('./views/Start'));
 const Home = lazy(() => import('./views/Home'));
 const About = lazy(() => import('./views/About'));
 const Skills = lazy(() => import('./views/Skills'));
+const Projects = lazy(() => import('./views/Projects'));
 const Articles = lazy(() => import('./views/Articles'));
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
                                     <Home />
                                     <About />
                                     <Skills />
+                                    <Projects />
                                     <Articles />
                                 </div>
                                 <Footer></Footer>
