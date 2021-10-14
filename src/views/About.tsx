@@ -80,6 +80,7 @@ const Bullet = styled.div`
 
     @media screen and ${device.laptop} {
         width: 33%;
+        margin-top: 15px;
 
         span {
             font-size: 24px;

@@ -51,7 +51,6 @@ const NavMenu = styled.nav`
         left: 0;
         right: 0;
         text-align: center;
-        padding-top: 100px;
         opacity: ${(props: Props) => (props.open ? "1" : "0")};
         pointer-events: ${(props: Props) => (props.open ? "auto" : "none")};
         transform: scale(${(props: Props) => (props.open ? "1" : "1.5")});
@@ -108,7 +107,6 @@ export default function Navbar(props: any) {
         { name: 'About', link: 'about'},
         { name: 'Skills', link: 'skills'},
         { name: 'Articles', link: 'articles'},
-        { name: 'Contact', link: 'contact'}
     ];
 
     return (

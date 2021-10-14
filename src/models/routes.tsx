@@ -3,5 +3,4 @@ export enum Routes {
     ABOUT = "about",
     SKILLS = "skills",
     ARTICLES = "articles",
-    // CONTACT = "contact"
 }
