@@ -31,7 +31,7 @@ const ProjectCard = styled.div`
     display: flex;
     flex-direction: column;
     color: #ffffff;
-    box-shadow: 0px 9px 32px -1px #3bad7f;
+    box-shadow: 0px 9px 32px -1px #fd5e53;
     margin: auto;
     margin-top: 5rem;
     opacity: 0.5;
@@ -49,10 +49,19 @@ const ProjectCardContent = styled.div`
     box-sizing: border-box;
 `;
 
-const ProjectImage = styled.img`
+const ProjectCardImage = styled.img`
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+`;
+
+const Paragraph = styled.p`
+    font-weight: 600;
+    text-align: justify;
+
+    span {
+        color: #3bad7f;
+    }
 `;
 
 const Buttons = styled.div`
@@ -63,7 +72,7 @@ const Buttons = styled.div`
     a {
         text-decoration: none;
         color: white;
-        background-color: #3bad7f;
+        background-color: #fd5e53;
         font-weight: 700;
         margin: 1rem;
         padding: 1rem;
@@ -122,11 +131,11 @@ export default function Projects() {
                 <ProjectsContainer>
                     {projects.map((project: Project) => (
                         <ProjectCard>
-                            <ProjectImage src={project.image} />
+                            <ProjectCardImage src={project.image} />
                             <ProjectCardContent>
                                 <h3>{project.name}</h3>
-                                <p>{project.description}</p>
-                                <p>{project.technologies}</p>
+                                <Paragraph>{project.description}</Paragraph>
+                                <Paragraph><span>Technologies: </span>{project.technologies}</Paragraph>
                                 <Buttons>
                                     <a href={project.links.url}>Project</a>
                                     <a href={project.links.repo}>Repository</a>

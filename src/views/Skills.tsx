@@ -38,6 +38,8 @@ const Tools = styled.div`
         }
         span {
             display: block;
+            font-weight: 600;
+            letter-spacing: 1.5px;
         }
 
         @media screen and ${device.tablet} {

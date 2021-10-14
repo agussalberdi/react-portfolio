@@ -21,7 +21,7 @@ const Title = styled.h1`
     font-size: 40px;
     font-weight: 300;
     margin: 0;
-    border-bottom: 3px solid #01563e;
+    border-bottom: 3px solid #fd5e53;
     padding-bottom: 5px;
 `;
 
@@ -56,7 +56,7 @@ const BulletContainer = styled.div`
 
 const Bullet = styled.div`
     width: 25%;
-    color: #bbe346;
+    color: #fd5e53;
     text-align: center;
     display: flex;
     flex-direction: column;

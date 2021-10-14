@@ -24,6 +24,7 @@ const SocialContainer = styled.div`
 const Paragraph = styled.p`
     color: #d6d6d6;
     margin: 0;
+    letter-spacing: 1.5px;
 
     @media screen and ${device.mobileM} {
         font-size: 14px;
