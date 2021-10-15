@@ -2,13 +2,13 @@ import React from 'react'
 import styled from 'styled-components';
 import { Section } from '../components/Section';
 import Wrapper from '../components/Wrapper';
+import IntersectionObserver from '../components/IntersectionObserver';
 import { Project } from '../models/project';
+import { Routes } from '../models/routes';
 import project1 from '../assets/images/Projects/project1.png';
 import project2 from '../assets/images/Projects/project2.png';
 import project3 from '../assets/images/Projects/project3.png';
 import project4 from '../assets/images/Projects/project4.png';
-import { Routes } from '../models/routes';
-import IntersectionObserver from '../components/IntersectionObserver';
 
 const ProjectsSection = styled(Section)`
     background: black;
@@ -20,29 +20,25 @@ const Title = styled.h1`
 `;
 
 const ProjectsContainer = styled.div`
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
 `;
 
 const ProjectCard = styled.div`
-    width: 20rem;
     background-color: #1e1e1e;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
     color: #ffffff;
     box-shadow: 0px 9px 32px -1px #fd5e53;
-    margin: auto;
-    margin-top: 5rem;
     opacity: 0.5;
     transition: ease-out 500ms;
     transform: scale(1);
 
     &:hover {
         opacity: 1;
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 `;
 

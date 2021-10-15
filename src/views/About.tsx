@@ -106,17 +106,17 @@ export default function About() {
                         <Subtitle>Hi there! I'm Agustin Alberdi</Subtitle>
                         <TextWrapper>
                             <div className="text">
-                                Self-motivated and proactive Front End Engineer eager to work in a good environment with great challenges ahead. Experienced in large data-flow applications with Angular, RxJs, TypeScript and Angular Material.
+                                Self-motivated and proactive Front End Engineer experienced in large data-flow applications with Angular, RxJs, TypeScript and Angular Material.
                             </div>
                             <div className="text">
-                                I am also experienced in other component based frameworks such as React and Vue.
+                                I am also qualified in other component based frameworks such as React and Vue. I love creating innovative applications prioritizing best practices to make the user journey a pleasant one.
                             </div>
                         </TextWrapper>
                         <BulletContainer>
                             <Bullet>
                                 <FaRegClock></FaRegClock>
                                 <span>Fast</span>
-                                <p>Fast load times and lag free interaction.</p>
+                                <p>Fast load times and lag free interaction by implementing lazy-loading strategy.</p>
                             </Bullet>
                             <Bullet>
                                 <FaMobileAlt></FaMobileAlt>
