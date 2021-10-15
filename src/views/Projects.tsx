@@ -7,6 +7,8 @@ import project1 from '../assets/images/Projects/project1.png';
 import project2 from '../assets/images/Projects/project2.png';
 import project3 from '../assets/images/Projects/project3.png';
 import project4 from '../assets/images/Projects/project4.png';
+import { Routes } from '../models/routes';
+import IntersectionObserver from '../components/IntersectionObserver';
 
 const ProjectsSection = styled(Section)`
     background: black;
@@ -73,10 +75,16 @@ const Buttons = styled.div`
         text-decoration: none;
         color: white;
         background-color: #fd5e53;
-        font-weight: 700;
+        font-weight: bold;
         margin: 1rem;
         padding: 1rem;
         border-radius: 0.5rem;
+        transition: ease-in 500ms;
+
+        &:hover {
+            color: black;
+            background-color: white;
+        }
     }
 `;
 
@@ -84,7 +92,7 @@ export default function Projects() {
     const projects: Project[] = [
         {
             name: 'Rick & Morty App',
-            description: 'Personal project using API of Rick and Morty TV show.',
+            description: 'Rick and Morty app that shows all characters, episodes and locations of this TV show.',
             technologies: 'Angular + TypeScript + RxJs + Firebase + SCSS + Angular Material',
             links: {
                 url: 'https://rick-morty-angular.netlify.app/',
@@ -114,8 +122,8 @@ export default function Projects() {
         },
         {
             name: 'WHG Test',
-            description: 'Front End test realized for WHG company. Allows you to search casino games by category and jackpots.',
-            technologies: 'Angular + TypeScript + RxJs + SCSS + Angular Material',
+            description: 'Front End test realized for WHG. It allows you to search casino games by category and jackpots.',
+            technologies: 'Angular + TypeScript + RxJs + SCSS',
             links: {
                 url: 'https://whitehat-gaming-test.netlify.app/',
                 repo: 'https://github.com/agussalberdi/whitehat-gaming-frontend-test'
@@ -125,26 +133,30 @@ export default function Projects() {
     ];
 
     return (
-        <ProjectsSection>
-            <Wrapper overflow="visible">
-                <Title>Projects</Title>
-                <ProjectsContainer>
-                    {projects.map((project: Project) => (
-                        <ProjectCard>
-                            <ProjectCardImage src={project.image} />
-                            <ProjectCardContent>
-                                <h3>{project.name}</h3>
-                                <Paragraph>{project.description}</Paragraph>
-                                <Paragraph><span>Technologies: </span>{project.technologies}</Paragraph>
-                                <Buttons>
-                                    <a href={project.links.url}>Project</a>
-                                    <a href={project.links.repo}>Repository</a>
-                                </Buttons>
-                            </ProjectCardContent>
-                        </ProjectCard>
-                    ))}
-                </ProjectsContainer>
-            </Wrapper>
-        </ProjectsSection>
+        <div id={Routes.PROJECTS}>
+            <IntersectionObserver id={Routes.PROJECTS} hash={Routes.PROJECTS}>
+                <ProjectsSection>
+                    <Wrapper overflow="visible">
+                        <Title>Projects</Title>
+                        <ProjectsContainer>
+                            {projects.map((project: Project) => (
+                                <ProjectCard>
+                                    <ProjectCardImage src={project.image} />
+                                    <ProjectCardContent>
+                                        <h3>{project.name}</h3>
+                                        <Paragraph>{project.description}</Paragraph>
+                                        <Paragraph><span>Stack: </span>{project.technologies}</Paragraph>
+                                        <Buttons>
+                                            <a href={project.links.url}>Project</a>
+                                            <a href={project.links.repo}>Repository</a>
+                                        </Buttons>
+                                    </ProjectCardContent>
+                                </ProjectCard>
+                            ))}
+                        </ProjectsContainer>
+                    </Wrapper>
+                </ProjectsSection>
+            </IntersectionObserver>
+        </div>
     )
 }
