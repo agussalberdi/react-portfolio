@@ -21,13 +21,9 @@ const Title = styled.h1`
     font-size: 40px;
     font-weight: 300;
     margin: 0;
-    border-bottom: 3px solid #fd5e53;
+    margin-bottom: 25px;
     padding-bottom: 5px;
-`;
-
-const Subtitle = styled.h2`
-    font-weight: 300;
-    letter-spacing: .15em;
+    border-bottom: 3px solid #fd5e53;
 `;
 
 const TextWrapper = styled.div`
@@ -39,6 +35,7 @@ const TextWrapper = styled.div`
     div.text {
         width: 48%;
         letter-spacing: 1.5px;
+        line-height: 2;
 
         @media screen and ${device.tablet} {
             width: 100%;
@@ -76,6 +73,7 @@ const Bullet = styled.div`
         color: white;
         letter-spacing: 1.5px;
         font-size: 14px;
+        line-height: 2;
     }
 
     @media screen and ${device.laptop} {
@@ -103,7 +101,6 @@ export default function About() {
                 <AboutSection>
                     <Wrapper alignment="left">
                         <Title>About me</Title>
-                        <Subtitle>Hi there! I'm Agustin Alberdi</Subtitle>
                         <TextWrapper>
                             <div className="text">
                                 Self-motivated and proactive Front End Engineer experienced in large data-flow applications with Angular, RxJs, TypeScript and Angular Material.

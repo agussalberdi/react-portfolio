@@ -5,6 +5,7 @@ import Wrapper from '../components/Wrapper';
 import IntersectionObserver from '../components/IntersectionObserver';
 import { Project } from '../models/project';
 import { Routes } from '../models/routes';
+import { device } from '../utilities/device';
 import project1 from '../assets/images/Projects/project1.png';
 import project2 from '../assets/images/Projects/project2.png';
 import project3 from '../assets/images/Projects/project3.png';
@@ -16,7 +17,11 @@ const ProjectsSection = styled(Section)`
 `;
 
 const Title = styled.h1`
-    font-size: 3rem
+    font-size: 3rem;
+
+    @media screen and ${device.mobileM} {
+        font-size: 2rem;
+    }
 `;
 
 const ProjectsContainer = styled.div`
@@ -28,16 +33,13 @@ const ProjectsContainer = styled.div`
 `;
 
 const ProjectCard = styled.div`
-    background-color: #1e1e1e;
+    background-color: white;
     border-radius: 10px;
-    color: #ffffff;
-    box-shadow: 0px 9px 32px -1px #fd5e53;
-    opacity: 0.5;
+    color: black;
     transition: ease-out 500ms;
     transform: scale(1);
 
     &:hover {
-        opacity: 1;
         transform: scale(1.05);
     }
 `;
@@ -56,6 +58,7 @@ const ProjectCardImage = styled.img`
 const Paragraph = styled.p`
     font-weight: 600;
     text-align: justify;
+    line-height: 2;
 
     span {
         color: #3bad7f;
@@ -70,12 +73,13 @@ const Buttons = styled.div`
     a {
         text-decoration: none;
         color: white;
-        background-color: #fd5e53;
+        background-color: black;
         font-weight: bold;
         margin: 1rem;
         padding: 1rem;
         border-radius: 0.5rem;
         transition: ease-in 500ms;
+        border: 2px solid black;
 
         &:hover {
             color: black;

@@ -17,14 +17,15 @@ const SocialContainer = styled.div`
     a {
         color: #d6d6d6;
         font-size: 1.5rem;
-        margin: 5px;
+        margin-right: 20px;
     }
 `;
 
 const Paragraph = styled.p`
+display: inline-block;
     color: #d6d6d6;
     margin: 0;
-    letter-spacing: 1.5px;
+    letter-spacing: 2.5px;
 
     @media screen and ${device.mobileM} {
         font-size: 14px;

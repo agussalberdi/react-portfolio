@@ -14,7 +14,6 @@ const StartContainer = styled.div`
     width: 100vw;
     height: 100vh;
     background-color: #171718;
-    font-family: 'Italianno', cursive;
     color: white;
     padding: 20px;
     box-sizing: border-box;

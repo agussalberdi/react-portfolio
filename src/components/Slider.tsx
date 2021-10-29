@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Animations } from '../utilities/Animations';
+import { device } from '../utilities/device';
 
 const SliderWrapper = styled.div`
     display: flex;
@@ -14,12 +15,17 @@ const SliderWrapper = styled.div`
 
 const Slide = styled.div`
     width: 180px;
-    border: 2px solid #ffffff;
+    border: 2px solid #171718;
     border-radius: 5px;
     padding: 5px;
-    color: #ffffff;
+    color: #171718;
     font-weight: 700;
-    transition: 1s;
+    transition: ease-out 500ms;
+
+    @media screen and ${device.mobileM} {
+        width: 150px;
+        font-size: 12px;
+    }
 `;
 
 const Arrow = styled.div`

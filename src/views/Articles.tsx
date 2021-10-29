@@ -21,7 +21,14 @@ const Container = styled.div`
 `;
 
 const ArticleTag = styled.a`
-    width: 45%;
+    width: 40%;
+    transition: ease-in-out 500ms;
+    opacity: 0.7;
+
+    &:hover {
+        transform: scale(1.1);
+        opacity: 1;
+    }
 
     img {
         width: 100%;
@@ -33,10 +40,11 @@ const ArticleTag = styled.a`
     }
 `;
 
-const Title = styled.h2`
+const Title = styled.h1`
     text-align: left;
     color: #191919;
-    margin: 0 0 15px 0;
+    margin: 0 0 50px 0;
+    font-size: 3rem;
 `;
 
 export default function Articles() {
@@ -55,7 +63,7 @@ export default function Articles() {
         <div id={Routes.ARTICLES}>
             <IntersectionObserver id={Routes.ARTICLES} hash={Routes.ARTICLES}>
                 <ArticlesSection>
-                    <Wrapper>
+                    <Wrapper overflow="visible">
                         <Title>Featured</Title>
                         <Container>
                             {articles.map((article: Article) => <ArticleTag href={article.url} target="_blank"><img src={article.image} /></ArticleTag>)}

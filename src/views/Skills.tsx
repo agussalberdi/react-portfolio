@@ -13,14 +13,15 @@ import { device } from '../utilities/device';
 const stack = [FaHtml5, FaCss3, IoLogoJavascript, SiTypescript, FaAngular, FaReact, FaGit];
 
 const SkillsSection = styled(Section)`
-    background-color: #f4f4f4;
+    background-color: #fbfbfd;
 `;
 
-const Title = styled.h2`
-    margin: 0 0 25px 0;
+const Title = styled.h1`
+    font-size: 3rem;
+    margin: 0 0 50px 0;
 
     @media screen and ${device.mobileM} {
-        font-size: 18px;
+        font-size: 2rem;
     }
 `;
 
@@ -32,6 +33,9 @@ const Tools = styled.div`
 
     div {
         width: calc(100% / ${stack.length});
+        margin-top: 25px;
+        transition: ease-in-out 600ms;
+        cursor: pointer;
 
         svg {
             font-size: 35px;
@@ -42,9 +46,12 @@ const Tools = styled.div`
             letter-spacing: 1.5px;
         }
 
-        @media screen and ${device.tablet} {
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        @media screen and ${device.laptop} {
             width: 25%;
-            margin-top: 20px;
         }
 
         @media screen and ${device.mobileL} {
@@ -62,8 +69,8 @@ export default function Skills() {
         <div id={Routes.SKILLS}>
             <IntersectionObserver id={Routes.SKILLS} hash={Routes.SKILLS}>
                 <SkillsSection>
-                    <Wrapper>
-                        <Title>Main Tools and technologies!</Title>
+                    <Wrapper overflow="visible">
+                        <Title>My Stack</Title>
                         <Tools>
                             <div>
                                 <FaHtml5 color="#d1382b" />

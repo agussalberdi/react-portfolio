@@ -9,9 +9,10 @@ import { Routes } from '../models/routes';
 import bg from '../assets/images/bg.jpg';
 import Slider from '../components/Slider';
 import { Animations } from '../utilities/Animations';
+import { device } from '../utilities/device';
 
 const HomeSection = styled(Section)`
-    background: linear-gradient(rgba(0, 0, 0, 0.92), rgba(14, 121, 121, 0.66)), url(${bg});
+    background: url(${bg});
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -31,23 +32,32 @@ const SocialContainer = styled.div`
     animation: 2s ${Animations.FadeInUp};
 
     a {
-        color: #d6d6d6;
+        color: #171718;
         font-size: 2rem;
-        margin-right: 5px;
+        margin-right: 20px;
+
+        @media screen and ${device.mobileM} {
+            font-size: 1.5rem;
+        }
     }
 `;
 
 const Title = styled.h2`
     margin: 0;
     margin-top: 20px;
-    font-family: 'Italianno', cursive;
-    font-weight: 300;
+    font-weight: 600;
     letter-spacing: .15em;
-    color: #d6d6d6;
+    color: #171718;
     animation: 2s ${Animations.FadeInUp};
+
+    @media screen and ${device.mobileM} {
+        font-size: 1.5rem;
+    }
 `;
 
 export default function Home() {
+    const title = `I'm Agustin Alberdi`;
+
     return (
         <div id={Routes.HOME}>
             <IntersectionObserver id={Routes.HOME} hash={Routes.HOME}>
@@ -68,7 +78,7 @@ export default function Home() {
                                     <FaInstagram/>
                                 </a>
                             </SocialContainer>
-                            <Title>I'm Agustin Alberdi</Title>
+                            <Title>{title}</Title>
                             <Slider auto={true} arrows={false}></Slider>
                         </MainContainer>
                     </Wrapper>
