@@ -36,7 +36,7 @@ const SocialContainer = styled.div`
         font-size: 2rem;
         margin-right: 20px;
 
-        @media screen and ${device.mobileM} {
+        @media screen and ${device.mobileL} {
             font-size: 1.5rem;
         }
     }
@@ -50,7 +50,7 @@ const Title = styled.h2`
     color: #171718;
     animation: 2s ${Animations.FadeInUp};
 
-    @media screen and ${device.mobileM} {
+    @media screen and ${device.mobileL} {
         font-size: 14px;;
     }
 `;

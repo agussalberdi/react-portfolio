@@ -7,22 +7,22 @@ const SliderWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 230px;
+    width: 292px;
     margin-top: 20px;
     transition: 1s;
     animation: 2s ${Animations.FadeInUp};
 `;
 
 const Slide = styled.div`
-    width: 180px;
-    border: 2px solid #171718;
-    border-radius: 5px;
-    padding: 5px;
-    color: #171718;
+    width: inherit;
+    border-radius: 3px;
+    padding: 10px;
+    background-color: #00000057;
+    color: #fff;
     font-weight: 700;
     transition: ease-out 500ms;
 
-    @media screen and ${device.mobileM} {
+    @media screen and ${device.mobileL} {
         width: 150px;
         font-size: 12px;
     }
