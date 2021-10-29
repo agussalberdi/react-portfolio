@@ -44,15 +44,15 @@ const TextWrapper = styled.div`
 `;
 
 const BulletContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
     margin-top: 30px;
 `;
 
 const Bullet = styled.div`
-    width: 25%;
     color: #fd5e53;
     text-align: center;
     display: flex;
@@ -72,25 +72,15 @@ const Bullet = styled.div`
     p {
         color: white;
         letter-spacing: 1.5px;
+        text-align: left;
         font-size: 14px;
         line-height: 2;
     }
 
     @media screen and ${device.laptop} {
-        width: 33%;
-        margin-top: 15px;
-
         span {
             font-size: 24px;
         }
-    }
-
-    @media screen and ${device.tablet} {
-        width: 50%;
-    }
-
-    @media screen and ${device.mobileM} {
-        width: 100%;
     }
 `;
 

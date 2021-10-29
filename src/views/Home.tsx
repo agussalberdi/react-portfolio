@@ -51,7 +51,7 @@ const Title = styled.h2`
     animation: 2s ${Animations.FadeInUp};
 
     @media screen and ${device.mobileM} {
-        font-size: 1.5rem;
+        font-size: 14px;;
     }
 `;
 

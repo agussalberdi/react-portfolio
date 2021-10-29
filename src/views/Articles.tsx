@@ -45,6 +45,10 @@ const Title = styled.h1`
     color: #191919;
     margin: 0 0 50px 0;
     font-size: 3rem;
+
+    @media screen and ${device.mobileM} {
+        font-size: 2rem;
+    }
 `;
 
 export default function Articles() {
