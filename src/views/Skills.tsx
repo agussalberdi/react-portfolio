@@ -70,7 +70,7 @@ export default function Skills() {
             <IntersectionObserver id={Routes.SKILLS} hash={Routes.SKILLS}>
                 <SkillsSection>
                     <Wrapper overflow="visible">
-                        <Title>My Stack</Title>
+                        <Title>Skills</Title>
                         <Tools>
                             <div>
                                 <FaHtml5 color="#d1382b" />

@@ -60,12 +60,11 @@ const Bullet = styled.div`
     align-items: center;
 
     svg {
-        font-size: 40px;
+        font-size: 35px;
         margin-bottom: 15px;
     }
 
     span {
-        font-size: 30px;
         font-weight: 700;
     }
 
@@ -75,12 +74,6 @@ const Bullet = styled.div`
         text-align: left;
         font-size: 14px;
         line-height: 2;
-    }
-
-    @media screen and ${device.laptop} {
-        span {
-            font-size: 24px;
-        }
     }
 `;
 
