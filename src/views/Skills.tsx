@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
-import { FaAngular, FaReact, FaGit, FaHtml5, FaCss3 } from "react-icons/fa";
+import { FaAngular, FaReact, FaGit, FaHtml5, FaCss3, FaJira } from "react-icons/fa";
 import { IoLogoJavascript } from 'react-icons/io';
-import { SiTypescript } from 'react-icons/si';
+import { SiTypescript, SiReactivex, SiFirebase } from 'react-icons/si';
 
 import IntersectionObserver from '../components/IntersectionObserver';
 import { Section } from '../components/Section';
@@ -10,7 +10,7 @@ import Wrapper from '../components/Wrapper';
 import { Routes } from '../models/routes';
 import { device } from '../utilities/device';
 
-const stack = [FaHtml5, FaCss3, IoLogoJavascript, SiTypescript, FaAngular, FaReact, FaGit];
+const stack = [FaHtml5, FaCss3, IoLogoJavascript, SiTypescript, FaAngular, FaReact, SiReactivex, SiFirebase, FaGit, FaJira];
 
 const SkillsSection = styled(Section)`
     background-color: #fbfbfd;
@@ -34,8 +34,7 @@ const Tools = styled.div`
     div {
         width: calc(100% / ${stack.length});
         margin-top: 25px;
-        transition: ease-in-out 600ms;
-        cursor: pointer;
+        transition: ease-in-out 400ms;
 
         svg {
             font-size: 35px;
@@ -97,8 +96,20 @@ export default function Skills() {
                                 <span>React</span>
                             </div>
                             <div>
+                                <SiReactivex color="#bb008f" />
+                                <span>RxJs</span>
+                            </div>
+                            <div>
+                                <SiFirebase color="#ffcb2b" />
+                                <span>Firebase</span>
+                            </div>
+                            <div>
                                 <FaGit color="#f05033" />
                                 <span>Git</span>
+                            </div>
+                            <div>
+                                <FaJira color="#2584ff" />
+                                <span>Jira</span>
                             </div>
                         </Tools>
                     </Wrapper>

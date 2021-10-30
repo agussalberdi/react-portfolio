@@ -147,8 +147,8 @@ export default function Projects() {
                                         <Paragraph>{project.description}</Paragraph>
                                         <Paragraph><span>Stack: </span>{project.technologies}</Paragraph>
                                         <Buttons>
-                                            <a href={project.links.url}>Project</a>
-                                            <a href={project.links.repo}>Repository</a>
+                                            <a href={project.links.url} target="_blank">Project</a>
+                                            <a href={project.links.repo} target="_blank">Repository</a>
                                         </Buttons>
                                     </ProjectCardContent>
                                 </ProjectCard>
