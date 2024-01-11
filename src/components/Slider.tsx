@@ -57,15 +57,15 @@ export default function Slider(props: Props) {
     const prev = () => {
         const condition = index <= 0;
         const prevIndex = condition ? slides.length - 1 : index - 1;
-        const prevSlide = condition ? slides[slides.length - 1] : slides[index - 1];
+        const prevSlide = slides[prevIndex];
         setSlide(prevSlide);
         setIndex(prevIndex);
     }
 
     const next = () => {
         const condition = index >= slides.length - 1;
-        const nextSlide = condition ? slides[0] : slides[index + 1];
         const nextIndex = condition ? 0 : index + 1;
+        const nextSlide = slides[nextIndex];
         setSlide(nextSlide);
         setIndex(nextIndex);
     }
